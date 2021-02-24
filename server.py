@@ -22,7 +22,7 @@ def hello():
     if request.headers.get('end')=="true":
         # print(data)
         # data=bytes(data)
-        print(data)
+        # print(data)
         data = base64.b64decode(data)
         # print(data)
         # print(len(data))
