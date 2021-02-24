@@ -15,16 +15,16 @@ def hello():
     # print(d)
     if request.headers.get('start')=="true":
         start=1
-        print(start)
+        # print(start)
     
     
         # print(start)
     if request.headers.get('end')=="true":
         # print(data)
         # data=bytes(data)
-        print(data)
+        # print(data)
         data = base64.b64decode(data)
-        print(data)
+        # print(data)
         print("success")
         f.write(data)
         start=0
@@ -32,7 +32,7 @@ def hello():
     if(start==0):
         data=""
         filename=""
-        
+
     if(start==1):
         data=data+d
         # print(data)
