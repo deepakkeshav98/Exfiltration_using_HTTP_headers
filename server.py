@@ -12,7 +12,7 @@ def hello():
     global start
     global data
     d=request.headers.get('data')
-    # print(d)
+    # print(len(d))
     if request.headers.get('start')=="true":
         start=1
         # print(start)
@@ -22,9 +22,10 @@ def hello():
     if request.headers.get('end')=="true":
         # print(data)
         # data=bytes(data)
-        # print(data)
+        print(data)
         data = base64.b64decode(data)
         # print(data)
+        # print(len(data))
         print("success")
         f.write(data)
         start=0
@@ -34,7 +35,9 @@ def hello():
         filename=""
 
     if(start==1):
+        # print(len(d))
         data=data+d
+        # print(len(data))
         # print(data)
         # print(d)
 
